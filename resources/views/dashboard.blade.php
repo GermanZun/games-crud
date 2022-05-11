@@ -3,7 +3,7 @@
         {{ __('Dashboard') }}
     </x-slot>
 
-
+    @livewire('game-form')
     @livewire('game-list')
 
 </x-app-layout>
