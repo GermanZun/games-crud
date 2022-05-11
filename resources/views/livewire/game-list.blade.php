@@ -2,9 +2,12 @@
     @foreach($games as $game)
         <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
 
-            <img class="w-full h-48"
-                 src="{{$game->image_url}}"
-                 alt="game" />
+            <a href="{{$game->url}}" target="_blank">
+                <img class="w-full h-48"
+                    src="{{$game->image_url}}"
+                    alt="game"/>
+            </a>
+
             <div class="px-6 py-4">
                 <h4 class="mb-3 text-xl font-semibold tracking-tight text-gray-800">{{$game->name}}</h4>
                 <p class="leading-normal text-gray-700">{{$game->description}}</p>
