@@ -12,4 +12,10 @@ class Game extends Model
     use SoftDeletes;
 
     protected $fillable = ['name', 'url', 'description', 'image_url', 'status_id'];
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
+
 }

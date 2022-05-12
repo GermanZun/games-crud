@@ -25,6 +25,10 @@
                 </button>
             </div>
 
+            <div class="py-3 px-6 border-t border-gray-300 text-gray-600 text-center ">
+                {{$game->status->name}}
+            </div>
+
         </div>
     @endforeach
 </div>
