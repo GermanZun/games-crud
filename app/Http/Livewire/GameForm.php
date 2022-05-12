@@ -13,9 +13,9 @@ class GameForm extends Component
 
     protected $rules = [
         'game.name' => 'required|min:3',
-        'game.description' => '',
-        'game.url' => 'required',
-        'game.image_url' => 'required',
+        'game.description' => 'sometimes|min:3',
+        'game.url' => 'required|url',
+        'game.image_url' => 'required|url',
         'game.status_id' => ''
     ];
 
