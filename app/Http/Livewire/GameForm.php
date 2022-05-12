@@ -39,7 +39,7 @@ class GameForm extends Component
         $this->game->save();
         $this->mount();
         $this->emit('refreshList');
-        session()->flash('green', 'Se ha agregado un nuevo juego.');
+        session()->flash('message', 'Se ha agregado un nuevo juego.');
     }
 
     public function render()
