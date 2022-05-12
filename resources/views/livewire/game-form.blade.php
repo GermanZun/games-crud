@@ -1,4 +1,14 @@
 <div class="mt-10 sm:mt-0">
+
+    @foreach (['green', 'red', 'yellow', 'blue'] as $key)
+        @if(session()->has($key))
+            <div class="bg-{{$key}}-100 rounded-lg py-5 px-6 mb-4 text-base text-{{$key}}-700 mb-3" role="alert">
+                {!! session()->get($key) !!}
+                <button type="button" class="btn-close box-content w-4 h-4 p-1 ml-auto text-yellow-900 border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-yellow-900 hover:opacity-75 hover:no-underline" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+    @endforeach
+
     <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="md:col-span-1">
             <div class="px-4 sm:px-0">
