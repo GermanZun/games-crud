@@ -6,12 +6,19 @@ use App\Http\Livewire\GameForm;
 use App\Models\Game;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Livewire\Livewire;
 use Tests\TestCase;
 
 class GameFormTest extends TestCase
 {
+    use RefreshDatabase;
+
+    /**
+     * Correr seeder después de cada prueba
+     *
+     * @var bool
+     */
+    protected $seed = true;
 
     /** @test */
     public function the_component_can_render()
